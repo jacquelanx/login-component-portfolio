@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+import userRoutes from './routes/userRoute.js';
+
 dotenv.config();
 
 // Set up server
@@ -16,6 +18,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send('Hello World!');
 })
+app.use('/user', userRoutes)
 
 // MongoDB setup
 mongoose.connect(process.env.MONGO_URI)
