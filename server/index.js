@@ -22,9 +22,9 @@ app.use('/user', userRoutes)
 
 // MongoDB setup
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('🌸 MongoDB connected!'))
+    .then(() => console.log('MongoDB connected!'))
     .catch(err => console.error(err));
 
 // Run server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🎀 Server is running on Port ${PORT}!`));
+app.listen(PORT, () => console.log(`Server is running on Port ${PORT}!`));
